@@ -1,26 +1,26 @@
 # your code goes here
-def begins_with_r(array)
-  array.all? do |word|
+def begins_with_r(arr)
+  arr.all? do |word|
     word.downcase.chr == "r"
   end
 end
 
-def contain_a (array)
-  array.select {|element| element.include?("a")}
+def contain_a (arr)
+  arr.select {|element| element.include?("a")}
 end
 
-def first_wa(array)
-  array.find {|word| word.to_s.start_with?("wa")}
+def first_wa(arr)
+  arr.find {|word| word.to_s.start_with?("wa")}
 end
 
-def remove_non_strings(array)
-  array.reject {|element| element.class != String}
+def remove_non_strings(arr)
+  arr.reject {|element| element.class != String}
 end
 
 
-def count_elements(array)
+def count_elements(arr)
   counts = Hash.new(0)
-  array.collect {|element| counts[element]+=1 }
+  arr.collect {|element| counts[element]+=1 }
     counts.collect do |hash, number|
       hash[:count] = number
     end
@@ -35,8 +35,8 @@ def merge_data(keys, data)
   end
 end
 
-def find_cool(array)
-  array.select {|entry| entry if entry.has_value?("cool")}
+def find_cool(arr)
+  arr.select {|entry| entry if entry.has_value?("cool")}
 end
 
 def organize_schools(schools)
